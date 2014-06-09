@@ -11422,6 +11422,46 @@ _.each(api.food, function(food, key) {
 });
 
 api.quests = {
+  dilatory: {
+    text: function() {
+      return "dilatory";
+    },
+    notes: function() {
+      return "dilatory";
+    },
+    completion: function() {
+      return "dilatory";
+    },
+    value: 0,
+    canBuy: false,
+    boss: {
+      name: function() {
+        return "dilatory";
+      },
+      hp: 1200,
+      str: 2.5,
+      breaker: 1000
+    },
+    drop: {
+      items: [
+        {
+          type: 'eggs',
+          key: 'Rat',
+          text: t('questRatDropRatEgg')
+        }, {
+          type: 'eggs',
+          key: 'Rat',
+          text: t('questRatDropRatEgg')
+        }, {
+          type: 'eggs',
+          key: 'Rat',
+          text: t('questRatDropRatEgg')
+        }
+      ],
+      gp: 80,
+      exp: 800
+    }
+  },
   evilsanta: {
     canBuy: false,
     text: t('questEvilSantaText'),

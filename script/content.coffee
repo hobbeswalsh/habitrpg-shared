@@ -668,6 +668,26 @@ _.each api.food, (food,key) ->
 
 api.quests =
 
+  dilatory:
+    text: ->"dilatory"
+    notes: ->"dilatory"
+    completion: ->"dilatory"
+    value: 0
+    canBuy: false
+    boss:
+      name: ->"dilatory"
+      hp: 1200
+      str: 2.5
+      breaker:1000
+    drop:
+      items: [
+        {type: 'eggs', key: 'Rat', text: t('questRatDropRatEgg')}
+        {type: 'eggs', key: 'Rat', text: t('questRatDropRatEgg')}
+        {type: 'eggs', key: 'Rat', text: t('questRatDropRatEgg')}
+      ]
+      gp: 80
+      exp: 800
+
   evilsanta:
     canBuy:false
     text: t('questEvilSantaText') # title of the quest (eg, Deep into Vice's Layer)
