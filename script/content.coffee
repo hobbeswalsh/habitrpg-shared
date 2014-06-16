@@ -677,7 +677,8 @@ api.quests =
     boss:
       name: ->"dilatory"
       hp: 1200
-      str: 2.5
+      str: 1
+      def: 1
       breaker:1000
     drop:
       items: [
@@ -894,6 +895,8 @@ api.quests =
 
 _.each api.quests, (v,key) ->
   _.defaults v, {key,canBuy:true}
+  if v.boss
+    _.defaults v.boss, {str:1,def:1}
 
 api.backgrounds =
   backgrounds062014:
